@@ -7,6 +7,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -21,7 +22,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.lenovo.thefirstcode1_2.itemager.BaseViewPager;
-import com.example.lenovo.thefirstcode1_2.itemager.ListItemViewPager;
 import com.example.lenovo.thefirstcode1_2.pager.CustomizeViewPager;
 
 import java.util.ArrayList;
@@ -74,6 +74,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
         mListView.setAdapter(new MyAdapter());
         mPager.setAdapter(new MyPagerAdapter());
+        //初始化页面
+        mPager.setCurrentItem(mNumber);
     }
 
     //添加监听的方法
@@ -110,6 +112,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         //mPager.setCurrentItem(i+3);
         BaseViewPager baseViewPager=mListPager.get(i+3);
+        Log.i("ListItemViewPager", "initListDate: "+(i+3));
         baseViewPager.initListDate(list.get(i));
         layout.closeDrawer(Gravity.LEFT);
     }

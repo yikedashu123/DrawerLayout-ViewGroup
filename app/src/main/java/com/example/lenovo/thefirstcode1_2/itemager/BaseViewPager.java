@@ -12,7 +12,7 @@ public class BaseViewPager {
     private TextView mText;
     private View mView;
     //TODO 数据测试
-    private String str;
+    public String str;
     public BaseViewPager(Context context)
     {
         this.mContext=context;
@@ -26,8 +26,6 @@ public class BaseViewPager {
     protected View initView() {
         View view=View.inflate(mContext, R.layout.item_pager_layout,null);
         mText=view.findViewById(R.id.tv_pagerText);
-        mText.setText(str);
-        Log.i("ListItemViewPager", "initListDate: "+mText.getText().toString());
         return view;
     }
     public void initDate(int s)
@@ -44,11 +42,12 @@ public class BaseViewPager {
                 str="动态";
                 break;
         }
-        Log.i("ListItemViewPager", "initListDate: "+str);
+        mText.setText(str);
     }
     public void initListDate(String s)
     {
         Log.i("ListItemViewPager", "initListDate: "+s);
+        mText.setText(s);
     }
 
     public View getRootView()
