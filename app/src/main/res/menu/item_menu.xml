@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/back"
+        android:title="收藏"
+        android:icon="@drawable/icon_favorite"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/share"
+        android:title="收藏"
+        android:icon="@drawable/icon_share"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/menu"
+        android:title="收藏"
+        android:icon="@drawable/img_menu"
+        app:showAsAction="always"/>
+</menu>
