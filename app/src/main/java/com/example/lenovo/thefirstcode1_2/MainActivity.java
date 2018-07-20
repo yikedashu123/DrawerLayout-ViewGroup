@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     //listView的监听实现
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        //mPager.setCurrentItem(i+3);
+        mPager.setCurrentItem(i+3);
         BaseViewPager baseViewPager=mListPager.get(i+3);
         Log.i("ListItemViewPager", "initListDate: "+(i+3));
         baseViewPager.initListDate(list.get(i));
